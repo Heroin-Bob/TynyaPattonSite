@@ -90,6 +90,13 @@
     font-size: 8px;
   }
 }
+
+@media (max-width: 540px){
+  #aboutme .contentWrapper .column:nth-child(3) img{
+    width: 100% !important;
+  }
+}
+
 body{
   background: var(--color2);
 }
