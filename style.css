@@ -1,0 +1,26 @@
+
+
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+:root {
+  --color1 = #77aaff;
+  --color2 = #99ccff;
+  --color3 = #bbeeff;
+  --color4 = #5588ff;
+  --color5 = #3366ff;
+}
+body{
+  background: var(--color1);
+  font-family: sans-serif;
+}
+
+nav{
+  background: var(--color1);
+  height: 80px;
+}
