@@ -1,5 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
+:root {
+  --color7: #FFFFFF;
+  --color6: #333333;
+  --color5: #ccdbdf;
+  --color4: #9dadbf;
+  --color3: #7a9cba;
+  --color2: #54737e;
+  --color1: #334c51;
+}
 
+@media (max-width: 1048px){
+  nav ul{
+    margin-right: 20px;
+  }
+  nav ul a{
+    font-size: 20px;
+  }
+}
+@media (max-width: 935px){
+  #navIcon{
+    display: block !important;
+  }
+
+  nav ul{
+    background: var(--color1);
+    text-align: center;
+    position: fixed;
+    display: block !important;
+    top: 100px;
+    left: 0;
+    height: calc(100% - 100px);
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+  }
+  nav ul li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: none;
+    border-bottom: 1px solid var(--color4);
+    padding: 5vh 0 5vh 0;
+  }
+  nav ul li:last-child{
+    padding: 5vh 0 5vh 0;
+  }
+  nav ul a{
+    font-size: 15px;
+  }
+
+  .contentWrapper{
+    flex-direction: row !important;
+    width: 100%;
+  }
+  #aboutme .contentWrapper{
+    justify-content: space-between;
+  }
+  #aboutme .contentWrapper .column{
+    width: 100%;
+  }
+  #aboutme .contentWrapper .column p{
+    width: 100%;
+    font-size: 10px;
+  }
+  #aboutme .contentWrapper .column:nth-child(1){
+      display: none;
+  }
+  #aboutme .contentWrapper .column:nth-child(2){
+
+      width: 50%;
+  }
+  #aboutme .contentWrapper .column:nth-child(2)::before{
+      content: 'About Me';
+      text-align: center;
+      font-weight: bold;
+      font-size: 20px;
+      padding: 10px;
+      width: 100%;
+  }
+  #aboutme .contentWrapper .column:nth-child(3){
+      width: 50% !important;
+  }
+  #aboutme .contentWrapper .column:nth-child(3) img{
+
+  }
+  .readMore{
+    font-size: 8px;
+  }
+}
+body{
+  background: var(--color2);
+}
 
 *{
   padding: 0;
@@ -8,19 +101,208 @@
   text-decoration: none;
   list-style: none;
 }
-:root {
-  --color1 = #77aaff;
-  --color2 = #99ccff;
-  --color3 = #bbeeff;
-  --color4 = #5588ff;
-  --color5 = #3366ff;
-}
-body{
-  background: var(--color1);
-  font-family: sans-serif;
+
+html{
+  scroll-behavior: smooth;
+  font-family: 'Raleway', sans-serif;
 }
 
+p{
+  font-size: 20px;
+}
+
+
+          /*Navigation Bar*/
+
 nav{
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
   background: var(--color1);
-  height: 80px;
+  height: 100px;
+  width: 100%;
+  z-index: 1;
+  opacity: 95%;
+  user-select: none;
+}
+
+nav #logoWrapper{
+  width: 170px !important;
+  height: 91px !important;
+  position: relative;
+  margin: 0 0 0 20px;
+  background-repeat: no-repeat;
+  background: #FFFFFF;
+  display: flex;
+  padding: 10px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: inset 0 0 5px var(--color2);
+}
+#logoWrapper img{
+  width: 100%;
+  height: 100%;
+}
+
+nav ul{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  left: -100%;
+  transition: all .5s;
+}
+
+nav ul.show{
+  left: 0 !important;
+}
+
+nav li{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: var(--color4);
+  font-size: 25px;
+  border-right: 1px solid #FFF;
+  padding: 0px 10px;
+}
+
+nav li:last-child{
+  border: none;
+  padding: 0px 10px;
+}
+
+nav li a{
+  transition: .3s;
+  color: inherit;
+  z-index: 1;
+  padding: 5px 10px;
+  border: 1px solid transparent;
+}
+
+nav li a:after{
+
+}
+nav li a:hover{
+  border: 1px solid var(--color3);
+  border-radius: 5px;
+}
+
+#navIcon{
+  display: none;
+  color: var(--color4);
+  font-size: 30px;
+  line-height: 80px;
+  float: right;
+  margin: 0 40px 0 0;
+  cursor: pointer;
+}
+
+          /*Sections*/
+
+.section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.section h1{
+  background: var(--color4);
+  padding: 10px 20px;
+  border-radius: 10px;
+  opacity: 80%;
+  color: var(--color2);
+}
+
+.section:nth-child(5){
+  background-image: url("images/happyCouple.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-left: 40px solid var(--color2);
+  border-right: 40px solid var(--color2);
+}
+
+
+          /*Content*/
+
+.contentWrapper{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 80%;
+  background: var(--color7);
+}
+
+
+          /*About Me*/
+
+#aboutme .contentWrapper .column{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+#aboutme .contentWrapper .column p{
+    color: var(--color1);
+}
+
+#aboutme .contentWrapper .column:nth-child(2){
+  text-align: left;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+
+}
+#aboutme .contentWrapper .column:nth-child(1){
+  width: 20%;
+}
+#aboutme .contentWrapper .column:nth-child(2){
+  Width: 45%;
+}
+
+#aboutme .contentWrapper .column:nth-child(3){
+  width: 35%;
+  height: 100%;
+  background: var(--color7);
+  background-image: url("images/woodenBoards.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 0;
+}
+#aboutme .contentWrapper .column img{
+  width: 75%;
+  padding: 20px;
+}
+
+
+          /*Read More Text*/
+.startText{
+
+}
+.startText span{
+  color: var(--color2);
+}
+.moreText{
+  display: none;
+}
+
+.readMore{
+  background: var(--color2);
+  color: var(--color7);
+  border: none;
+  padding: 10px 15px;
+  width: auto;
+  cursor: pointer;
+  margin: 20px 0 0 0;
 }
