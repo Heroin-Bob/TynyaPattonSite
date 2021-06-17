@@ -14,6 +14,19 @@ $(document).ready(function(){
   });
 });
 
+$(document).ready(function(){
+  $('.readMore').click(function(){
+    if (this.innerText == "Read More...") {
+      document.getElementById("aboutMeContent").getElementsByClassName("moreText")[0].style.display = "inline";
+      this.innerText = "Read Less...";
+
+    } else {
+      this.innerText = "Read More...";
+      document.getElementById("aboutMeContent").getElementsByClassName("moreText")[0].style.display = "none";
+    }
+  });
+});
+/*
 function loader(){
   var coll = document.getElementsByClassName("readMore");
   var i;
@@ -32,3 +45,4 @@ function loader(){
     });
   }
 }
+*/
