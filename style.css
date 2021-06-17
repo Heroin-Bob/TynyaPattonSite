@@ -10,6 +10,25 @@
   --color1: #334c51;
 }
 
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--color7);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--color3);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color2);
+}
+
 @media (max-width: 1048px){
   nav ul{
     margin-right: 20px;
@@ -256,6 +275,7 @@ nav li a:hover{
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  max-height: 100%;
 }
 
 #aboutme .contentWrapper .column p{
@@ -292,16 +312,20 @@ nav li a:hover{
   padding: 20px;
 }
 
+#aboutMeContent{
+  max-height: 300px;
+  overflow-y: auto;
+}
+
 
           /*Read More Text*/
 .startText{
 
 }
-.startText span{
-  color: var(--color2);
-}
+
 .moreText{
   display: none;
+  transition: .5s;
 }
 
 .readMore{
@@ -312,4 +336,6 @@ nav li a:hover{
   width: auto;
   cursor: pointer;
   margin: 20px 0 0 0;
+  user-select: none;
+  outline: none;
 }
