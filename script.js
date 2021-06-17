@@ -14,7 +14,7 @@ $(document).ready(function(){
   });
 });
 
-function onload(){
+function loader(){
   var coll = document.getElementsByClassName("readMore");
   var i;
 
