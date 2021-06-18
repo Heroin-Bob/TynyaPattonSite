@@ -26,23 +26,13 @@ $(document).ready(function(){
     }
   });
 });
-/*
-function loader(){
-  var coll = document.getElementsByClassName("readMore");
-  var i;
 
-  for (i = 0; i < coll.length; i++) {
-    coll[i].addEventListener("click", function() {
-      this.classList.toggle("active");
-      if (this.innerText == "Read More...") {
-        document.getElementById("aboutMeContent").getElementsByClassName("moreText")[0].style.display = "inline";
-        this.innerText = "Read Less...";
+$(document).ready(function(){
+  $('.serviceHeading').click(function(){
+    $(this).toggleClass('active');
+    var content = $(this).next().prop('outerHTML');
+    $('#servicesDescriptionContainer').html(content);
+    $('#servicesDescriptionContainer .serviceDescription').css('display', 'block')
 
-      } else {
-        this.innerText = "Read More...";
-        document.getElementById("aboutMeContent").getElementsByClassName("moreText")[0].style.display = "none";
-      }
-    });
-  }
-}
-*/
+  });
+});
