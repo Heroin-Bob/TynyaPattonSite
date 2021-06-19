@@ -29,10 +29,31 @@ $(document).ready(function(){
 
 $(document).ready(function(){
   $('.serviceHeading').click(function(){
+    $('.serviceHeading').each(function(i, obj) {
+      if ($(this).hasClass('active')){
+        $(this).toggleClass('active');
+        $(this).css('background','transparent');
+        $(this).css('border-top','1px solid transparent');
+      }
+    });
     $(this).toggleClass('active');
     var content = $(this).next().prop('outerHTML');
+    $(this).css('background','var(--color3)');
+    $(this).css('border-top','1px solid var(--color2)');
     $('#servicesDescriptionContainer').html(content);
-    $('#servicesDescriptionContainer .serviceDescription').css('display', 'block')
+    $('#servicesDescriptionContainer .serviceDescription').css('display', 'block');
 
   });
 });
+
+
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementsByTagName("nav")[0].style.top = "0";
+  } else {
+    document.getElementsByTagName("nav")[0].style.top = "-100px";
+  }
+  prevScrollpos = currentScrollPos;
+};

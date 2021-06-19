@@ -11,7 +11,25 @@
   <script src="https://kit.fontawesome.com/afca37efe2.js" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script src="script.js"></script>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
 
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyCnop-zx-hL2UA0oSapVamqfK7UR0c1egs",
+      authDomain: "tynya-site.firebaseapp.com",
+      projectId: "tynya-site",
+      storageBucket: "tynya-site.appspot.com",
+      messagingSenderId: "579158318547",
+      appId: "1:579158318547:web:1700b8621599e7181ea326"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
 
   <title>Tynya Patton, LPC</title>
 </head>
@@ -33,6 +51,7 @@
       <i class="fas fa-bars"></i>
     </label>
   </nav>
+
   <!--Home-->
   <div id="home" class="section home">
     <div class="contentWrapper">
@@ -58,7 +77,8 @@
             internationally
             recognized expert in Cognitive Behavioral Therapy.
             <br>
-            I use Cognitive Behavioral Therapy, and specialize in working with clients who are experiencing depression, anxiety, grief, relationship issues, trauma, life transition, LGBT+, and those who are in alternative relationships or alternative
+            I use Cognitive Behavioral Therapy, and specialize in working with clients who are experiencing depression, anxiety, grief, relationship issues, trauma, life transition, LGBT+, and those who are in alternative relationships or
+            alternative
             lifestyles. I only treat individuals, not couples.<br>
             <br>
             My passions are counseling and pets. My dog, Navi, will be present for your sessions. He is a bit camera- shy, so you may not see him, but you may hear his gentle snoring, or his not-so-gentle "YIP!," as he dreams. Be prepared for me to
@@ -88,7 +108,8 @@
         vestibulum leo ante, vitae suscipit purus aliquam vitae. Donec tincidunt quam et ipsum accumsan, sit amet molestie lectus sollicitudin. Ut convallis, nisl non dapibus tincidunt, urna dolor consectetur eros, a lobortis dolor nibh vel risus.
       </p>
       <li class="serviceHeading">Service 2</li>
-      <p class="serviceDescription">Sed a iaculis dolor. Integer vel porta diam. Pellentesque eget blandit arcu, nec maximus massa. Nunc imperdiet nulla ac quam pharetra finibus. Nunc auctor ultrices consequat. Nunc ornare a tortor eu rutrum. Mauris
+      <p class="serviceDescription">Sed a iaculis dolor. Integer vel porta diam. Pellentesque eget blandit arcu, nec maximus massa. Nunc imperdiet nulla ac quam pharetra finibus. Nunc auctor ultrices consequat. Nunc ornare a tortor eu rutrum.
+        Mauris
         ut leo consequat lorem placerat pellentesque.</p>
       <li class="serviceHeading">Service 3</li>
       <p class="serviceDescription">Sed ullamcorper turpis nec lacus rutrum, sed fringilla erat tristique. Duis porta pretium risus in pharetra. Mauris id diam sit amet est laoreet pellentesque non feugiat ipsum. Integer pulvinar scelerisque ipsum,
@@ -108,8 +129,62 @@
     <h1>Blog</h1>
   </div>
   <div id="contact" class="section">
-    <h1>Contact</h1>
+    <!--<h1>Contact</h1>-->
+
+    <div class="fcf-body">
+
+      <div id="fcf-form">
+        <h3 class="fcf-h3">Contact us</h3>
+
+        <form id="fcf-form-id" class="fcf-form-class" method="post" action="contact-form-process.php">
+
+          <div class="fcf-form-group">
+            <label for="Name" class="fcf-label">Your name</label>
+            <div class="fcf-input-group">
+              <input type="text" id="Name" name="Name" class="fcf-form-control" required>
+            </div>
+          </div>
+
+          <div class="fcf-form-group">
+            <label for="Email" class="fcf-label">Your email address</label>
+            <div class="fcf-input-group">
+              <input type="email" id="Email" name="Email" class="fcf-form-control" required>
+            </div>
+          </div>
+
+          <div class="fcf-form-group">
+            <label for="Message" class="fcf-label">Your message</label>
+            <div class="fcf-input-group">
+              <textarea id="Message" name="Message" class="fcf-form-control" rows="6" maxlength="3000" required></textarea>
+            </div>
+          </div>
+
+          <div class="fcf-form-group">
+            <button type="submit" id="fcf-button" class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block">Send Message</button>
+          </div>
+
+          <div class="fcf-credit" id="fcf-credit">
+            Simple HTML email form provided by: <a href="https://www.freecontactform.com" target="_blank">FreeContactForm.com</a>
+          </div>
+
+        </form>
+      </div>
+
+    </div>
+
+
+
   </div>
+
+
+
+
+
 </body>
+
+
+
+
+
 
 </html>
