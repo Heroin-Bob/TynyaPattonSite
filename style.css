@@ -578,6 +578,7 @@ nav li a:hover {
 }
 
 #contact {
+  border-top: 3px solid var(--color7);
 	background: var(--color3);
 	padding:25px;
   background-image: url('images/contact.webp');
