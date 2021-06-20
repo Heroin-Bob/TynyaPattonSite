@@ -37,12 +37,14 @@ $(document).ready(function(){
       }
     });
     $(this).toggleClass('active');
-    var content = $(this).next().prop('outerHTML');
+    var oneIn = $(this).next().prop('outerHTML');
+    var twoIn = $(this).next().next().prop('outerHTML');
+    var content = oneIn + twoIn ;
     $(this).css('background','var(--color3)');
     $(this).css('border-top','1px solid var(--color2)');
     $('#servicesDescriptionContainer').html(content);
     $('#servicesDescriptionContainer .serviceDescription').css('display', 'block');
-
+    $('#servicesDescriptionContainer .serviceImage').css('display', 'block');
   });
 });
 

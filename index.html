@@ -11,25 +11,6 @@
   <script src="https://kit.fontawesome.com/afca37efe2.js" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script src="script.js"></script>
-  <!-- The core Firebase JS SDK is always required and must be listed first -->
-  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
-
-  <!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-
-  <script>
-    // Your web app's Firebase configuration
-    var firebaseConfig = {
-      apiKey: "AIzaSyCnop-zx-hL2UA0oSapVamqfK7UR0c1egs",
-      authDomain: "tynya-site.firebaseapp.com",
-      projectId: "tynya-site",
-      storageBucket: "tynya-site.appspot.com",
-      messagingSenderId: "579158318547",
-      appId: "1:579158318547:web:1700b8621599e7181ea326"
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-  </script>
 
   <title>Tynya Patton, LPC</title>
 </head>
@@ -44,7 +25,6 @@
       <li><a class="navLink" href="#aboutme">About Me</a></li>
       <li><a class="navLink" href="#aboutnavi">About Navi</a></li>
       <li><a class="navLink" href="#practiceinfo">Services</a></li>
-      <li><a class="navLink" href="#blog">Blog</a></li>
       <li><a class="navLink" href="#contact">Contact</a></li>
     </ul>
     <label id="navIcon">
@@ -114,31 +94,49 @@
     </div>
     <div id="servicesContainer">
       <li class="serviceHeading">Depression and Bipolar Disorders</li>
+      <img class="serviceImage" src="images/depression.webp" alt="">
       <p class="serviceDescription">If you need support with low mood or trouble enjoying things, I can help you find your positivity, and start living life to the full. I provide Cognitive Behavioral Therapy for those struggling with depressive disorders. Depression is a common condition that can be triggered by traumatic events, or it may appear for seemingly no reason. It can cause feelings like loneliness, guilt, and worthlessness. Sadly, many people struggle with the condition on their own, for months or even years, before getting professional help.<br><br>If you suspect you may be experiencing depression do get in touch with me or another healthcare professional. Depression can be effectively treated, but only you can take the first step.
       <br><br>I also provide support and counseling for those who have bipolar disorders. Extreme mood swings, very high to very low, may be a bipolar disorder.</p>
 
       <li class="serviceHeading">Anxiety</li>
       <p class="serviceDescription">I treat anxiety with Cognitive Behavioral Therapy. Whether you are suffering from a generalized anxiety about nearly everything or anxiety mostly in social situations, we can work together to overcome your fears and anxieties.<br><br>
         I will provide ways for you to understand your anxiety. I help you make sense of these feelings and overcome them so you can move forward feeling comfortable and confident. You will learn proven methods so you can thrive. I can teach you strategies for calming, coping, and relaxing. When thoughts start to spiral out of control, you will understand what is happening and be able to act. You will be running your life, not your anxiety.</p>
+      <img class="serviceImage" src="images/anxiety.jpg" alt="">
 
       <li class="serviceHeading">LGBTQIA+</li>
+      <img class="serviceImage" src="images/lgbtq.jpg" alt="">
       <p class="serviceDescription">Although a person’s sexual or romantic orientation or gender identity may not be a source of distress, people who identify as lesbian, gay, bisexual, transgender, queer, questioning, asexual, or any other orientation or gender identity may find that the social stigma of living as a minority is a source of stress or anxiety.<br><br>
 Whether you are seeking therapy for issues associated with your sexual, romantic, or gender identity or for concerns related to mental health, I have experience and familiarity with the challenges members of the LGBTQIA community often face. If the situation suggests it, I will be happy to provide a letter of recommendation for surgery or to begin hormone treatment. (May require ongoing therapy.) I am experienced and knowledgeable in treating issues that arise in alternative relationships.</p>
+
 
       <li class="serviceHeading">Grief, Trauma, Stress, Coping Skills, Self Esteem, and Other Concerns</li>
       <p class="serviceDescription">I also provide therapy for persons dealing with grief, who have experienced trauma in their lives, have issues coping, dealing with low self-esteem or confidence, and other mental health or emotional concerns.<br><br>
         You and I will be a team, working to improve your emotional well-being and functioning. </p>
+      <img class="serviceImage" src="images/distress.webp" alt="">
     </div>
     <div id="servicesDescriptionContainer">
 
     </div>
 
   </div>
-  <div id="blog" class="section">
-    <h1>Blog</h1>
-  </div>
   <div id="contact" class="section">
-    <h1>Contact</h1>
+    <div class="contactcontainer">
+      <form id="contactform" action="" method="post">
+        <h3>Contact</h3>
+        <h4>Use this form to send me an email and I will respond as soon as possible!</h4>
+        <fieldset>
+          <input placeholder="Your name" type="text" tabindex="1" required autofocus>
+        </fieldset>
+        <fieldset>
+          <textarea placeholder="Type your Message Here...." tabindex="5" required></textarea>
+        </fieldset>
+        <fieldset>
+          <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+        </fieldset>
+      </form>
+
+
+    </div>
   </div>
 </body>
 
