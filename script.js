@@ -48,7 +48,9 @@ $(document).ready(function(){
   });
 });
 
+window.location.href = window.location + "#home";
 
+/*
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
 var currentScrollPos = window.pageYOffset;
@@ -59,3 +61,4 @@ var currentScrollPos = window.pageYOffset;
   }
   prevScrollpos = currentScrollPos;
 };
+*/
