@@ -268,24 +268,6 @@ nav li a:hover {
   height: 100vh;
 }
 
-.section h1 {
-  background: var(--color4);
-  padding: 10px 20px;
-  border-radius: 10px;
-  opacity: 80%;
-  color: var(--color2);
-}
-
-#services {
-  background-image: url("images/happyCouple.jpg");
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-left: 40px solid var(--color2);
-  border-right: 40px solid var(--color2);
-}
-
 /*Content*/
 .contentWrapper {
   display: flex;
@@ -392,7 +374,7 @@ nav li a:hover {
   z-index: 0;
 }
 
-#aboutme .contentWrapper .column img {
+#aboutme .contentWrapper .column img:first-child {
   width: 75%;
   padding: 20px;
 }
@@ -400,6 +382,19 @@ nav li a:hover {
 #aboutMeContent {
   max-height: 300px;
   overflow-y: auto;
+}
+
+.aboutmelogo{
+  background: var(--color7);
+  width: 60%;
+  padding: 10px;
+}
+
+.aboutmeimages{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 /*About Navi*/
@@ -495,8 +490,15 @@ nav li a:hover {
 
 /*Services*/
 #services {
-  display: block;
+  display: flex;
   flex-direction: column;
+  background-image: url("images/happyCouple.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-left: 40px solid var(--color2);
+  border-right: 40px solid var(--color2);
 }
 
 #serviceTitle h1 {
@@ -567,6 +569,59 @@ nav li a:hover {
 }
 
 
+/*Practice Info*/
+
+#practiceInfo{
+  /*
+  background-image: url('images/information.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  */
+}
+#practiceInfo{
+  height: 50vh;
+}
+#practiceInfoCard{
+  width: 80%;
+  background: var(--color5);
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border: 2px solid var(--color7);
+}
+
+#practiceInfoCard .column{
+  width: 33%;
+}
+#practiceInfoCard .column h1{
+  text-align: center;
+  padding: 0 0 10px 0;
+}
+#practiceInfoCard .column h5{
+  text-align: center;
+  padding: 10px 0;
+}
+#practiceInfo table{
+  margin: 0 auto;
+  text-align: center;
+}
+#practiceInfoCard td{
+  padding: 0 0 5px 0;
+}
+#practiceInfoCard td:nth-child(odd){
+  padding: 0 13px 0 0;
+  font-weight: bold;
+  border-bottom: 1px solid var(--color7);
+  text-align: left;
+
+}
+#practiceInfoCard td:nth-child(even){
+  border-bottom: 1px solid var(--color7);
+  text-align: right;
+}
 /*Contact*/
 
 .contactcontainer {
@@ -593,6 +648,15 @@ nav li a:hover {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+#contact img{
+  background: var(--color7);
+  margin: 0 auto;
+  width: 50%;
+  padding: 10px;
+  margin: 10px auto;
+}
+
 
 #contact h3 {
   color: var(--color5);
@@ -662,6 +726,26 @@ nav li a:hover {
 #contact input:focus, #contact textarea:focus {
   outline: 0;
   border: 1px solid #999;
+}
+.contactDetails{
+  text-align: center;
+}
+#contact h5{
+  color: var(--color7);
+  font-size: 15px;
+  padding: 0 0 10px 0;
+  font-weight: normal;
+}
+
+#contact a{
+  color: var(--color7);
+  text-decoration: underline;
+  transition: .3s;
+}
+
+#contact a:hover{
+  color: var(--color5);
+  transition: .3s;
 }
 
 ::-webkit-input-placeholder {
