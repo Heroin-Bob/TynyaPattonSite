@@ -81,51 +81,54 @@
     font-size: 40px !important;
   }
 
-  #aboutme .contentWrapper {
-    flex-direction: row !important;
-    width: 100%;
+  #aboutme .contentWrapper{
+    display: flex;
+    flex-direction: column-reverse !important;
   }
 
-  #aboutme .contentWrapper {
-    justify-content: space-between;
-  }
-
-  #aboutme .contentWrapper .column:nth-child(2){
-    width: 70% !important;
-  }
-
-  #aboutme .contentWrapper .column:nth-child(3){
-    width: 30% !important;
-  }
-
-  #aboutme .contentWrapper .column p {
-    width: 100%;
-    font-size: 12px;
-  }
-
-  #aboutme .contentWrapper .column:nth-child(1) {
+  #aboutme .contentWrapper .column:nth-child(1){
     display: none;
   }
 
-  #aboutme .contentWrapper .column:nth-child(2)::before {
-    content: 'About Me';
-    text-align: center;
-    font-weight: bold;
-    font-size: 20px;
-    padding: 10px;
-    width: 100%;
+  #aboutme .column{
+    width: 100% !important;
+    min-height: 50% !important;
+    max-height: 50% !important;
   }
 
+  #aboutme .aboutmeimages{
+    width: 100% !important;
+    flex-direction: row;
+  }
+
+  .aboutmelogo{
+    margin: 0 20px 0 0;
+  }
+
+  #aboutme .aboutmeimages img{
+    width: 50% !important;
+  }
+
+  #aboutMeContent{
+    font-size: 13px;
+  }
+
+  #aboutme .column:nth-child(2)::before{
+    content: 'About Me';
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+    font-weight: bold;
+    padding: 10px;
+  }
+
+  #aboutnavi p{
+    font-size: 12px !important;
+  }
 
   .readMore {
     font-size: 8px;
   }
-
-  #aboutMeContent {
-    max-height: 50% !important;
-    font-size: 15px;
-  }
-
 
   #services {
     width: 100% !important;
@@ -149,9 +152,33 @@
     margin: 0 0 20px 0;
   }
 
+  #practiceInfo{
 
+    height: 100vh !important;
+  }
+
+  #practiceInfoCard{
+    flex-direction: column !important;
+    width: 100% !important;
+    max-height: 80%;
+    overflow: auto;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #practiceInfoCard .column{
+    width: 100% !important;
+  }
+
+  #practiceInfoCard .column h1{
+    margin: 8px 0;
+    font-size: 14px;
+  }
+
+  #practiceInfoCard .column p, #practiceInfoCard .column td{
+    font-size: 12px;
+  }
 }
-
 @media (max-width: 540px) {
   #home h1 {
     font-size: 40px !important;
@@ -162,9 +189,6 @@
     font-weight: normal;
   }
 
-  #aboutme .contentWrapper .column:nth-child(3) img {
-    width: 100% !important;
-  }
 }
 
 body {
@@ -191,9 +215,6 @@ html {
   font-family: 'Raleway', sans-serif;
 }
 
-p {
-  font-size: 20px;
-}
 
 /*Navigation Bar*/
 nav {
