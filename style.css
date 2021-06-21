@@ -29,7 +29,10 @@
   background: var(--color2);
 }
 
-@media (max-width: 1048px) {
+@media (max-width: 1024px) {
+  nav li{
+    font-size: 12px;
+  }
   nav ul {
     margin-right: 20px;
   }
@@ -87,21 +90,21 @@
     justify-content: space-between;
   }
 
-  #aboutme .contentWrapper .column {
-    width: 100%;
+  #aboutme .contentWrapper .column:nth-child(2){
+    width: 70% !important;
+  }
+
+  #aboutme .contentWrapper .column:nth-child(3){
+    width: 30% !important;
   }
 
   #aboutme .contentWrapper .column p {
     width: 100%;
-    font-size: 10px;
+    font-size: 12px;
   }
 
   #aboutme .contentWrapper .column:nth-child(1) {
     display: none;
-  }
-
-  #aboutme .contentWrapper .column:nth-child(2) {
-    width: 50%;
   }
 
   #aboutme .contentWrapper .column:nth-child(2)::before {
@@ -113,19 +116,40 @@
     width: 100%;
   }
 
-  #aboutme .contentWrapper .column:nth-child(3) {
-    width: 50% !important;
-  }
-
-  #aboutme .contentWrapper .column:nth-child(3) img {}
 
   .readMore {
     font-size: 8px;
   }
 
   #aboutMeContent {
-    max-height: 80% !important;
+    max-height: 50% !important;
+    font-size: 15px;
   }
+
+
+  #services {
+    width: 100% !important;
+    border: none !important;
+  }
+
+  .dropdown{
+    display: inline-block !important;
+  }
+  .serviceTitle, .serviceHeading{
+    display: none !important;
+  }
+  .serviceDescription{
+    font-size: 12px !important;
+  }
+
+  #servicesDescriptionContainer img{
+    display: none !important;
+  }
+  #servicesDescriptionContainer{
+    margin: 0 0 20px 0;
+  }
+
+
 }
 
 @media (max-width: 540px) {
@@ -547,10 +571,11 @@ nav li a:hover {
   display: flex;
   justify-content: center;
   background: linear-gradient(0deg, rgba(110, 200, 201, 0) 0%, rgba(200, 200, 200) 100%);
-  height: 80%;
+  height: 100%;
   width: 100%;
   text-align: center;
   padding: 40px;
+  overflow-y: auto;
 }
 
 .serviceDescription {
@@ -567,8 +592,61 @@ nav li a:hover {
 .serviceImage {
   display: none;
   width: 50%;
+  height: auto;
 }
 
+.dropbtn {
+  background-color: var(--color3);
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.dropdown span{
+  font-family: 'Font Awesome 5 Free';
+
+}
+
+.dropdown span:after{
+  content: '\f067';
+  float: right;
+  font-weight: bold;
+}
+.dropdown:hover span:after{
+  content: '\f068';
+}
+
+.dropdown {
+  position: relative;
+  width: 60%;
+  display: none;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  width: 100%;
+}
+
+.dropdown-content .dropdownOption {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+}
+
+.dropdown-content .dropdownOption:hover {background-color: var(--color5);}
+
+.dropdown:hover .dropbtn {
+  background-color: var(--color2);
+}
 
 /*Practice Info*/
 
@@ -583,6 +661,8 @@ nav li a:hover {
 }
 #practiceInfo{
   height: 50vh;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 #practiceInfoCard{
   width: 80%;

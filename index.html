@@ -94,10 +94,23 @@
   </div>
 
   <div id="services" class="section">
-    <div id="serviceTitle">
-      <h1>Services</h1>
-    </div>
+
     <div id="servicesContainer">
+      <div id="serviceTitle">
+        <h1>Services</h1>
+      </div>
+
+      <div class="dropdown">
+        <button class="dropbtn" onclick="showDropdown()">Tap to view services <span></span></button>
+        <div class="dropdown-content">
+          <div class="dropdownOption" onclick="dropdownSelect('anxiety')">Anxiety</div>
+          <div class="dropdownOption" onclick="dropdownSelect('depression')">Depression and Bipolar Disorders</div>
+          <div class="dropdownOption" onclick="dropdownSelect('lgbtqia')">LGBTQIA+</div>
+          <div class="dropdownOption" onclick="dropdownSelect('other')">Other Services</div>
+
+        </div>
+      </div>
+
       <li class="serviceHeading">Depression and Bipolar Disorders</li>
       <img class="serviceImage" src="images/depression.webp" alt="">
       <p class="serviceDescription">If you need support with low mood or trouble enjoying things, I can help you find your positivity, and start living life to the full. I provide Cognitive Behavioral Therapy for those struggling with depressive
@@ -138,11 +151,12 @@
   <div id="practiceInfo" class="section">
     <div id="practiceInfoCard">
       <div class="column">
-        <h1>LOCATION</h1>
-        <p>My office is located in Nashville, TN. <br><br>To reduce the possibility of transmission of COVID-19, I am currently only seeing clients by teleconference (Zoom) or by telephone.</p>
+        <h1>Mettings</h1>
+        <p>For the convienience of all who may be seeking counseling services, I meet with clients exclusively by teleconference (Zoom) or by telephone. For any questions regarding this process please feel free to use the contact form at the bottom
+          of this site to reach out to me and I will respond as soon as possible.</p>
       </div>
       <div class="column">
-        <h1>HOURS</h1>
+        <h1>Hours</h1>
         <table>
           <tr>
             <td>Mondays</td>
@@ -162,14 +176,9 @@
           </tr>
           <tr>
             <td>Fridays</td>
-            <td>10 pm - 6 pm</td>
-          </tr>
-          <tr>
-            <td>Saturdays</td>
-            <td>12 pm - 2 pm</td>
+            <td>10 pm - 7 pm</td>
           </tr>
         </table>
-        <h5>Note: Saturdays available on urgency only</h5>
       </div>
       <div class="column">
         <h1>Insurance</h1>

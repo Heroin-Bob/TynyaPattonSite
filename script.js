@@ -59,3 +59,45 @@ var currentScrollPos = window.pageYOffset;
   }
   prevScrollpos = currentScrollPos;
 };
+
+function dropdownSelect(selection){
+  var description = "";
+  var option = "";
+  var i = "";
+  switch(selection){
+    case "depression":
+      i = 0;
+      option = "Depression and Bipolar Disorders";
+      break;
+    case "anxiety":
+      i = 1;
+      option = "Anxiety";
+      break;
+    case "lgbtqia":
+      i = 2;
+      option = "LGBTQIA+";
+      break;
+    case "other":
+      i = 3;
+      option = "Other";
+      break;
+  }
+  description = document.getElementsByClassName("serviceDescription")[i].innerHTML;
+
+  document.getElementsByClassName("dropbtn")[0].innerText = option;
+  document.getElementById("servicesDescriptionContainer").innerHTML = description;
+  document.getElementsByClassName("dropdown-content")[0].style.display = "none";
+
+}
+
+function showDropdown(){
+  document.getElementsByClassName("dropdown-content")[0].style.display = "block";
+  /*
+  var dropdown = document.getElementsByClassName("dropdown")[0];
+  if (  dropdown.getElementsByTagName("span")[0].style.content === '\f067'){
+    dropdown.getElementsByTagName("span")[0].style.content = '\f068';
+  } else {
+    dropdown.getElementsByTagName("span")[0].style.content = '\f067';
+  }
+  */
+}
