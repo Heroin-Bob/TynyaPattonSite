@@ -103,7 +103,7 @@ function showDropdown(){
 }
 
 function sendEmail(){
-  var email = "tynyapattonlpc@gmail.com";
+  var email = "tpattonlpc@gmail.com";
   var name = "Signed,\n-" + document.getElementById("emailname").value;
   var subject = document.getElementById("emailsubject").value;
   var emailBody = document.getElementById("emailbody").value;
