@@ -101,3 +101,11 @@ function showDropdown(){
   }
   */
 }
+
+function sendEmail(){
+  var email = "tynyapattonlpc@gmail.com";
+  var name = "Signed,\n-" + document.getElementById("emailname").value;
+  var subject = document.getElementById("emailsubject").value;
+  var emailBody = document.getElementById("emailbody").value;
+  window.location = 'mailto:' + email + '?subject=' + subject + '&body=' + encodeURIComponent(emailBody + "\n\n" + name);
+}

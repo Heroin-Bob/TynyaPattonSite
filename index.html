@@ -151,7 +151,7 @@
   <div id="practiceInfo" class="section">
     <div id="practiceInfoCard">
       <div class="column">
-        <h1>Mettings</h1>
+        <h1>Sessions</h1>
         <p>For the convienience of all who may be seeking counseling services, I meet with clients exclusively by teleconference (Zoom) or by telephone. For any questions regarding this process please feel free to use the contact form at the bottom
           of this site to reach out to me and I will respond as soon as possible.</p>
       </div>
@@ -189,28 +189,32 @@
 
   <div id="contact" class="section">
     <div class="contactcontainer">
-      <form id="contactform" action="" method="post">
+      <form id="contactform">
         <h3>Contact</h3>
         <h4>Use this form to send me an email and I will respond as soon as possible!</h4>
         <fieldset>
-          <input placeholder="Your name" type="text" tabindex="1" required>
+          <input id="emailname" placeholder="Your name" type="text" tabindex="1" required>
         </fieldset>
         <fieldset>
-          <textarea placeholder="Type your Message Here...." tabindex="5" required></textarea>
+          <input id="emailsubject" placeholder="Subject...." type="text" tabindex="1" required></input>
         </fieldset>
         <fieldset>
-          <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+          <textarea id="emailbody" placeholder="Type your Message Here...." tabindex="5" required></textarea>
+        </fieldset>
+
+        <fieldset>
+          <div name="submit" type="submit" id="contact-submit" data-submit="...Sending" onclick="sendEmail()">Submit</div>
         </fieldset>
       </form>
       <img src="images/Logo-01.png" alt="">
       <div class="contactDetails">
-        <h5>Email: <a href="mailto:tynyapattonlpc@gmail.com">tynypattonlpc@gmail.com</a></h5>
+        <h5>Email: <a href="mailto:tynyapattonlpc@gmail.com">tynyapattonlpc@gmail.com</a></h5>
         <h5>Phone: <a href="tel:+16153100246">615-310-0246</a></h4>
       </div>
 
     </div>
   </div>
-  -
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
 </body>
 
 
