@@ -142,8 +142,18 @@
   .serviceTitle, .serviceHeading{
     display: none !important;
   }
-  .serviceDescription{
-    font-size: 12px !important;
+
+  .serviceDescription {
+    display: block;
+    width: 70%;
+    padding: 10px 30px;
+    display: none;
+    text-align: center;
+    color: var(--color6);
+    font-size: 20px !important;
+    overflow-y: auto;
+    transition: .5s;
+    /*background: rgba(255,255,255,.8);*/
   }
 
   #servicesDescriptionContainer img{
@@ -607,8 +617,10 @@ nav li a:hover {
   display: none;
   text-align: center;
   color: var(--color6);
+  font-size: 20px;
   overflow-y: auto;
   transition: .5s;
+  /*background: rgba(255,255,255,.8);*/
 }
 
 .serviceImage {

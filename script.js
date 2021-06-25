@@ -39,7 +39,8 @@ $(document).ready(function(){
     $(this).toggleClass('active');
     var oneIn = $(this).next().prop('outerHTML');
     var twoIn = $(this).next().next().prop('outerHTML');
-    var content = oneIn + twoIn ;
+    var content = oneIn + twoIn;
+
     $(this).css('background','var(--color3)');
     $(this).css('border-top','1px solid var(--color2)');
     $('#servicesDescriptionContainer').html(content);
