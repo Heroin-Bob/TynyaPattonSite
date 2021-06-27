@@ -354,6 +354,7 @@ nav li a:hover {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  user-select: none;
 }
 
 #home .column:nth-child(1) {
@@ -378,6 +379,8 @@ nav li a:hover {
   position: relative;
   mix-blend-mode: screen;
   text-shadow: inset 0 0 8px black;
+  
+
 }
 
 #home h2{
