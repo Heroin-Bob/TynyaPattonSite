@@ -40,7 +40,6 @@ $(document).ready(function(){
     var oneIn = $(this).next().prop('outerHTML');
     var twoIn = $(this).next().next().prop('outerHTML');
     var content = oneIn + twoIn;
-
     $(this).css('background','var(--color3)');
     $(this).css('border-top','1px solid var(--color2)');
     $('#servicesDescriptionContainer').html(content);
@@ -83,10 +82,11 @@ function dropdownSelect(selection){
       option = "Other";
       break;
   }
-  description = document.getElementsByClassName("serviceDescription")[i].innerHTML;
+  description = document.getElementsByClassName("serviceDescription")[i].outerHTML;
 
   document.getElementsByClassName("dropbtn")[0].innerText = option;
   document.getElementById("servicesDescriptionContainer").innerHTML = description;
+  document.getElementById("servicesDescriptionContainer").getElementsByClassName("serviceDescription")[0].style.display = "block";  
   document.getElementsByClassName("dropdown-content")[0].style.display = "none";
 
 }
@@ -94,14 +94,6 @@ function dropdownSelect(selection){
 
 function showDropdown(){
   document.getElementsByClassName("dropdown-content")[0].style.display = "block";
-  /*
-  var dropdown = document.getElementsByClassName("dropdown")[0];
-  if (  dropdown.getElementsByTagName("span")[0].style.content === '\f067'){
-    dropdown.getElementsByTagName("span")[0].style.content = '\f068';
-  } else {
-    dropdown.getElementsByTagName("span")[0].style.content = '\f067';
-  }
-  */
 }
 
 function sendEmail(){
