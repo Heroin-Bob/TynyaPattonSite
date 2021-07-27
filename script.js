@@ -46,9 +46,13 @@ $(document).ready(function(){
     $('#servicesDescriptionContainer .serviceDescription').css('display', 'block');
     $('#servicesDescriptionContainer .serviceImage').css('display', 'block');
   });
+  $('.serviceHeading')[2].click();
 });
-
-
+/*
+$(document).ready(function(){
+  $('.serviceHeading')[2].click();
+});
+*/
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
 var currentScrollPos = window.pageYOffset;
@@ -86,7 +90,7 @@ function dropdownSelect(selection){
 
   document.getElementsByClassName("dropbtn")[0].innerText = option;
   document.getElementById("servicesDescriptionContainer").innerHTML = description;
-  document.getElementById("servicesDescriptionContainer").getElementsByClassName("serviceDescription")[0].style.display = "block";  
+  document.getElementById("servicesDescriptionContainer").getElementsByClassName("serviceDescription")[0].style.display = "block";
   document.getElementsByClassName("dropdown-content")[0].style.display = "none";
 
 }
