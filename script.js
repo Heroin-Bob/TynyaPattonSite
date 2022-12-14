@@ -1,3 +1,5 @@
+window.location.href = "https://caringtherapytn.com/";
+
 $(document).ready(function(){
   $('#navIcon').click(function(){
     if (window.innerWidth < "935"){
